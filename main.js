@@ -16,6 +16,7 @@ document.querySelector("body").addEventListener("click", e => {
   mimicServerCall()
   .then(response => {
     e.target.classList.add("activated-heart")
+    e.target.innerText = FULL_HEART
   })
   .catch(err => {
     errorMsg.innerText = err
@@ -25,6 +26,7 @@ document.querySelector("body").addEventListener("click", e => {
   //unlike
   } else if (e.target.className === "like-glyph activated-heart"){
     e.target.classList.remove("activated-heart")
+    e.target.innerText = EMPTY_HEART
   }
 })
 
